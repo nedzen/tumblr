@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Javascript
 
 The Navigation bar.
@@ -9,3 +10,9 @@ On mobile screens 480px and below, when a user clicks the main categories the qu
 
 *Entry*
 When click the location pin the little map should be brought up with a location pin on it. The javascript code has to be redone.
+=======
+tumblr
+======
+
+tumblr
+>>>>>>> 5c68f806befd5f35ebf450b8a1a1ce112cffe139
