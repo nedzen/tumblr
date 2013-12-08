@@ -1,0 +1,87 @@
+// Typography 
+////---------
+// For open sans use additional classes to controll font-weight wehen necessary.
+
+.mini-size-font()   { font-size: 75%; }
+.small-size-font()  { font-size: 85%; }
+.medium-size-font() { font-size: 100%; }
+.big-size-font()    { font-size: 120%; }
+
+//Fonts
+@opensans-font-path:      "../../fonts/";
+
+@opensans-regular:        "OpenSans-Regular";
+@opensans-semibold:       "OpenSans-Semibold";
+@opensans-semibolditalic: "OpenSans-SemiboldItalic";
+@opensans-bold:           "OpenSans-Bold";
+@opensans-bolditalic:     "OpenSans-BoldItalic";
+@opensans-italic:         "OpenSans-Italic";
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('@{opensans-font-path}@{opensans-regular}.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url('@{opensans-font-path}@{opensans-semibold}.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans Semibolditalic';
+  src: url('@{opensans-font-path}@{opensans-semibolditalic}.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('@{opensans-font-path}@{opensans-bold}.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans Bold Italic';
+  src: url('@{opensans-font-path}@{opensans-bolditalic}.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans Italic';
+  src: url('@{opensans-font-path}@{opensans-italic}.ttf') format('truetype');
+}
+
+
+//helperclasses //---------------------------------------------
+// To Do: Add alternative stylesheed (font-weight + font-style)
+// for fallback in case we use the font embeded from google;
+// Use: font-family: 'Open Sans', sans-serif;
+
+.OpenSansRegular        { font-family: 'Open Sans Regular'; }
+.OpenSansSemibold       { font-family: 'Open Sans Semibold'; }
+.OpenSansSemibolditalic { font-family: 'Open Sans Semibolditalic'; }
+.OpenSansBold           { font-family: 'Open Sans Bold'; }
+.OpenSansBolditalic     { font-family: 'Open Sans Bold Italic'; }
+.OpenSansItalic         { font-family: 'Open Sans Italic'; }
+
+
+// Header//
+.lead {
+	h1, h2, h3 {.OpenSansBold;}
+}
+.intro h1 {
+  .OpenSansBolditalic;
+  color: @blue;
+  font-size: 26px;
+  text-shadow: 1px 1px 2px rgba(255,255,255,.33);
+}
+.intro p  { .OpenSansBold; }
+.blue { color: @blue; }
+
+
+.heading {
+	em { .OpenSansSemibolditalic; font-style: normal; }
+}
+
+.small,
+small {
+	font-size: 11px; 
+	line-height: 14px;
+}
+

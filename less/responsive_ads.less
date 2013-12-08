@@ -1,0 +1,74 @@
+.adv {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  
+  &.center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .b120x120 { .square(120px); }
+
+  @media screen and (max-width:@screen-xs) {
+   &.xs-b168x42  { .size(168px, 42px); }
+   &.xs-b216x54  { .size(216px, 54px); }
+   &.xs-b300x50  { .size(300px, 50px); }
+   &.xs-b300x70  { .size(300px, 50px); }
+   //
+   &.xs-b300x250  { .size(300px, 250px); } //Medium rectangle 
+   &.xs-b250x250  { .size(250px, 250px); } //Square
+   &.xs-b200x200  { .size(200px, 200px); } //Small square
+   &.xs-hide      { display: none; }
+   background: green;
+  }
+  @media screen and (min-width: @screen-xs) and (max-width:@screen-sm)  {
+   &.sm-b300x75  { .size(300px, 75px); }
+   &.sm-b320x50  { .size(320px, 50px); }  //Mobile leaderboard
+   //
+   &.sm-b300x250  { .size(300px, 250px); } //Medium rectangle 
+   &.sm-b336x280  { .size(336px, 280px); } //Large rectangle
+   &.sm-b250x250  { .size(250px, 250px); } //Square
+   &.sm-b200x200  { .size(200px, 200px); } //Small square
+   &.sm-hide      { display: none; }
+
+   // custom //
+   &.sm-c450x120  {
+    .size(430px, 120px);
+    margin-left: auto;
+    margin-right: auto;
+    .b120x120 {
+      margin: 0px @grid-gutter-width/2;
+      float: left;
+    }
+   }
+
+   background: yellow;
+  }
+  @media screen and (min-width: @screen-sm) and (max-width: @screen-md) {
+   &.md-b300x75  { .size(300px, 75px); }
+   &.md-b320x50  { .size(320px, 50px); }  //Mobile leaderboard
+   //
+   &.md-b300x250  { .size(300px, 250px); } //Medium rectangle 
+   &.md-b336x280  { .size(336px, 280px); } //Large rectangle
+   &.md-b120x600  { .size(120px, 600px); }
+   &.md-b160x600  { .size(160px, 600px); }
+   &.md-b250x250  { .size(250px, 250px); } //Square
+   &.md-b200x200  { .size(200px, 200px); } //Small square 
+   &.md-b720x90   { .size(720px, 90px); }  //Large leaderboard
+   &.md-hide      { display: none; }
+   background: pink;
+  }
+  @media screen and (min-width: @screen-md) {
+   &.lg-b300x250  { .size(300px, 250px); } //Medium rectangle 
+   &.lg-b336x280  { .size(336px, 280px); } //Large rectangle
+   &.lg-b120x600  { .size(120px, 600px); }
+   &.lg-b160x600  { .size(160px, 600px); }
+   &.lg-b250x250  { .size(250px, 250px); } //Square
+   &.lg-b200x200  { .size(200px, 200px); } //Small square 
+   &.lg-b720x90   { .size(720px, 90px); }  //Large leaderboard
+   &.lg-hide      { display: none; }
+   background: orange;
+  }
+}

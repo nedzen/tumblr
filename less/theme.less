@@ -1,0 +1,254 @@
+//
+// Load core variables and mixins
+// --------------------------------------------------
+@import "lesshat.less";
+@import "variables.less";
+@import "mixins.less";
+
+
+
+@blue:  #393a44;
+@white: #FFFFFF;
+@darkgrey: #464646;
+
+//Adjusting defaults a little.
+body,
+ul,
+blockquote,
+p, h1, h2, h3, h4 {
+  margin: 0; padding: 0; 
+}
+
+h1, h2, h3 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  // width: 1px;
+  // outline: 1px solid black;
+  position: relative;
+  margin: 0 auto;
+  font-family:@font-family-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+  color: @darkgrey;
+}
+
+a {
+  color: @blue;
+  text-decoration: none;
+  &:hover {text-decoration:underline;}
+}
+
+blockquote {
+  font-size: 23px;
+  line-height: 29px;
+  font-style: italic;
+  color: @blue;
+  small {
+    color: @darkgrey;
+    font-size: 19px;
+    line-height: 23px;
+    padding-top: 33px;
+    display: block;
+  }
+}
+
+.nav {
+  display: block;
+  text-align: center;
+  padding: 23px 0;
+  li {
+    margin: 0 16px;
+    display: inline-block;
+  }
+  a {
+    .transition(100ms);
+  }
+}
+
+//Scaffolding
+@maincol: 666px;
+@mainpad: 66px;
+@seccol:  289px;
+@secpad:  49px;
+
+
+//global
+ul.main,
+.header,
+.pagination {
+  width: @maincol;
+}
+
+.wrap {
+  outline: 2px solid blue;
+  // position: relative;
+  width:@maincol + (@mainpad) + @seccol;
+  left: -333px;
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+  width: 1px * (666 - 66 * 2);
+  background: white;
+  padding: 66px;
+}
+
+.right {
+  outline: 1px dotted red;
+  float: left;
+  position: relative;
+  padding:59px 0 0 49px;
+  width: 259px;
+  font-style: italic;
+}
+
+.buttons {
+  position: relative;
+  outline: 1px dotted red;
+  padding-left:39px;
+  height: 35px;
+  outline: 2px solid blue;
+}
+
+.circle:hover {
+  .opt {opacity: 100;}
+}
+
+.opt {
+  li.circle {
+    .transition(160ms);
+    .border-radius(90px);
+    .size(35px, 35px);
+    background: white;
+    position: absolute;
+    left:7px;
+    top:16px;
+  }
+  display: block;
+  outline: 1px dotted red;
+  height: 35px;
+  padding-left: 39px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  .transition(300ms);
+
+  li {
+    float: left;
+    display: block;
+  }
+  img {
+    position: absolute;
+    
+    .size(15px, 15px);
+  }
+}
+
+.opt a {
+  float: left;
+  margin-right: 13px;
+}
+
+.post {
+  position: relative;
+  .clearfix;
+}
+
+
+// Layout elements.
+// ================================
+ul.main {
+  a {
+    &:hover {color: @blue;}
+    color: white;
+  }
+}
+
+.header {
+  padding: 19px 0px 60px;
+  text-align: center;
+  h1 {
+    font-size: 41px;
+    line-height: 69px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 19px;
+    font-style: italic;
+  }
+}
+
+.date {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 49px;
+}
+
+.title {
+  margin-bottom: 33px;
+  font-size: 23px;
+  line-height: 26px;
+}
+
+.preview {
+  p {
+    font-size: 15px;
+    margin-bottom: 33px;
+    line-height: 26px;
+  }
+}
+
+.read-more {
+  .border-radius(100px);
+  padding: 29px 0;
+  width: 73px;
+  line-height: 13px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.pagination {
+  li {
+    font-size: 16px;
+  }
+}
+
+.about {
+  padding: 33px 66px;
+  text-align: center;
+  background: white;
+  h3 {margin-bottom: 26px;}
+  p {
+    font-size: 15px;
+    margin-bottom: 33px;
+    line-height: 26px;
+  }
+}
+
+// right elem
+
+.post:hover {
+  // .info   {display: block;}
+  // .circle {
+  //  .size(35px, 35px);
+  //  top:0px;
+  //  left:-9px;
+  // }
+}
+
+.tags {
+  padding-top: 49px;
+}
+
+.no {display: none;}
